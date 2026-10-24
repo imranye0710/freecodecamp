@@ -6,8 +6,9 @@ def wise_speak(sentence):
         print(match.group(2))
         print(match.group(3))
         start = match.group(2).split(" ")
-        start = start[0].capitalize() + ' '.join(start[1:])
-        print(start)
+        start = f"{start[0].capitalize()} {' '.join(start[1:])}"
+        end = match.group(1).lower() + match.group(3)
+        print(f"{start}, {end}")
 
     
 
